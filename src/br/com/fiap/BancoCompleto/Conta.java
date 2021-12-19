@@ -15,7 +15,7 @@ public class Conta implements Serializable {
     private int conta;
     private double saldo;
 
-    private Titular titular = new Titular()
+    Titular titular = new Titular();
 
     //Formato de dois digitos após a vírgula nos tipo double
     DecimalFormat deci = new DecimalFormat(".00");

@@ -12,6 +12,14 @@ public class Teste {
         testeConta2.setConta(1235);
         testeConta2.setSaldo(250);
 
+        //Usando e testando os setters da classe Titular
+        testeConta1.titular.setNome("Labala da Silva");
+        testeConta1.titular.setCPF("12345678900");
+
+        //Testando os getters da classe Titular
+        System.out.println("Titular do testeConta1: " + testeConta1.titular.getNome() +
+                "\nCPF do titular do testeConta1: " + testeConta1.titular.getCPF());
+
         //Usando e testando os getters
         System.out.println("Agencia testeConta1: " + testeConta1.getAgencia() +
                 "\nConta testeConta1: " + testeConta1.getConta() +

@@ -1,24 +1,25 @@
-package br.com.fiap.BancoCompleto
+package br.com.fiap.BancoCompleto;
 
-public Class Titular {
+public class Titular {
 
-    private String nome;
-    private int cpf;
+private String nome;
+private String cpf;
 
 
-    public String getNome() {
+public String getNome() {
         return nome;
         }
 
-    public int getCPF() {
+public String getCPF() {
         return cpf;
         }
 
-    public void setNome(String nome) {
+public void setNome(String nome) {
         this.nome = nome;
         }
 
-    public void setCPF(int cpf) {
-        this.cpf = cpf
+public void setCPF(String cpf) {
+        this.cpf = cpf;
         }
 }
+
