@@ -6,6 +6,7 @@ public class Teste {
 
         Conta testeConta1 = new Conta(123, 1234, 200); //Construtor personalizado
         Conta testeConta2 = new Conta(); //Construtor padrão
+        Conta testeContaNull = new Conta();
 
         //Usando e testando os setters para inserir os atributos do objeto testeConta2
         testeConta2.setAgencia(123);
@@ -36,5 +37,11 @@ public class Teste {
 
         testeConta2.depositar(50);
         testeConta2.depositar(-5);
+
+        // Testando a lógica pra verificar se uma instância aponta pra null
+        if (testeContaNull != null) {
+            System.out.println("A instância não aponta pra null!");
+            System.out.println(testeContaNull);
+        }
     }
 }
