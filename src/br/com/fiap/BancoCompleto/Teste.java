@@ -21,7 +21,14 @@ public class Teste {
         System.out.println("Titular do testeConta1: " + testeConta1.titular.getNome() +
                 "\nCPF do titular do testeConta1: " + testeConta1.titular.getCPF());
 
-        //Usando e testando os getters
+        //Usando e testando os setters da classe Telefone
+        testeConta1.telefone.setTelefone("988005538");
+        testeConta1.telefone.setDdd("83");
+
+        //Testando o método getter que retorna (ddd) numero do objeto
+        System.out.println("Telefone formatado testeConta1: " +testeConta1.telefone.getTelFormatado());
+
+        //Usando e testando os getters da classe Conta
         System.out.println("Agencia testeConta1: " + testeConta1.getAgencia() +
                 "\nConta testeConta1: " + testeConta1.getConta() +
                 "\nSaldo testeConta1: R$ " + testeConta1.getSaldo());
@@ -30,7 +37,7 @@ public class Teste {
                 "\nConta testeConta2: " + testeConta2.getConta() +
                 "\nConta testeConta2: R$ " + testeConta2.getSaldo());
 
-        //Usando e testando os métodos
+        //Usando e testando os métodos da classe Conta
         testeConta1.sacar(100);
         testeConta1.sacar(101);
         testeConta1.sacar(-5);
