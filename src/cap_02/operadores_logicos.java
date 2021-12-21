@@ -1,10 +1,12 @@
 package cap_02;
+import java.util.Scanner;
 
 public class operadores_logicos {
 
     public static void main(String[] args){
 
-        int idade = 20;
+        Scanner entrada = new Scanner(System.in);
+        int idade = entrada.nextInt();
         boolean votoObrigatorio = idade >= 18 && idade <= 65; // && = operador lógico 'e', and
 
         System.out.println("Voto obrigatório para pessoas entre 18 e 65 anos, idade da pessoa: " + idade +
