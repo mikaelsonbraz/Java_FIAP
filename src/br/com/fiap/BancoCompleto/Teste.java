@@ -61,10 +61,15 @@ public class Teste {
         testeContaCorrente.sacar(100);
         testeContaCorrente.depositar(600);
         System.out.println(testeContaCorrente.getSaldo());
-        System.out.println(testeContaCorrente.getAgencia());
 
-        // Fazendo o casting de uma instância da classe Pai para a classe Filha
-        ContaCorrente testeConta3 = (ContaCorrente) testeConta1;
-        System.out.println(testeConta3.getAgencia());
+
+        // Testando o novo método sacar() sobrescrito da classe Conta pela classe ContaCorrente
+        System.out.println("\n\n\nTestando o novo método sobrescrito sacar()");
+        testeContaCorrente.sacar(100);
+        System.out.println("\n\n");
+        testeContaCorrente.sacar(2000);
+        System.out.println("\n\n");
+        testeContaCorrente.sacar(1400);
+
     }
 }

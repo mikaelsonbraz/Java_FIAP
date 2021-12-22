@@ -13,9 +13,11 @@ public class ContaCorrente extends Conta {
     /**
      * Construtor padrão
      */
-    public ContaCorrente(){}
+    public ContaCorrente() {
+    }
 
-    /** Construtor personalizado
+    /**
+     * Construtor personalizado
      */
     public ContaCorrente(String fisicaOuJuridica, double chequeEspecial) {
         this.fisicaOuJuridica = fisicaOuJuridica;
@@ -24,6 +26,7 @@ public class ContaCorrente extends Conta {
 
     /**
      * Getter Pessoa Física ou Jurídica
+     *
      * @return se a pessoa é física ou jurídica
      */
     public String getFisicaOuJuridica() {
@@ -32,6 +35,7 @@ public class ContaCorrente extends Conta {
 
     /**
      * Getter Cheque Especial
+     *
      * @return o valor do cheque especial que a conta detém
      */
     public double getChequeEspecial() {
@@ -40,6 +44,7 @@ public class ContaCorrente extends Conta {
 
     /**
      * Setter fisicaOuJuridica
+     *
      * @param fisicaOuJuridica - Introduz se a conta pertence a uma pessoa física ou jurídica
      */
     public void setFisicaOuJuridica(String fisicaOuJuridica) {
@@ -48,6 +53,7 @@ public class ContaCorrente extends Conta {
 
     /**
      * Setter chequeEspecial
+     *
      * @param chequeEspecial - Determina o valor do cheque especial da conta
      */
     public void setChequeEspecial(double chequeEspecial) {
@@ -61,6 +67,26 @@ public class ContaCorrente extends Conta {
     public String getSaldo() {
         return "Valor do saldo: " + super.getSaldo() +
                 "\nValor do Cheque Especial: " + this.chequeEspecial;
+    }
+
+    public void sacar(double valor) {
+        String valorFormatado = super.getSaldo().replaceAll(",", ".");
+        double valorDouble = Double.parseDouble(valorFormatado);
+        if (valorDouble >= valor && valor > 0) {
+            super.sacar(valor);
+        } else if (valorDouble + this.chequeEspecial >= valor) {
+            double valorRestante = valor - valorDouble;
+            super.sacar(valorDouble);
+            this.chequeEspecial -= valorRestante;
+            System.out.println("Valor de saldo insuficiente para sacar R$ " + valor +
+                    "\nRetirando o restante do Cheque Especial" +
+                    "\nNovo valor do Cheque Especial: R$ " + this.chequeEspecial);
+        } else {
+            System.out.println("O valor do saldo e do cheque especial somados não são suficientes para retirar" +
+                    "o valor especificado" +
+                    "\nValor do saldo em conta: R$ " + super.getSaldo() +
+                    "\nValor do Cheque Especial: R$ " + this.chequeEspecial);
+        }
     }
 }
 
