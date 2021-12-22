@@ -70,6 +70,13 @@ public class ContaCorrente extends Conta {
     }
 
     //@Override para indicar que o método a seguir sobrescreve (polimorfismo) um método da classe Pai
+
+    /**
+     * Método sobrescrito da classe Pai (polimorfismo) que verifica e retira o valor caso haja saldo suficiente na conta,
+     * caso não, o método verificará se há saldo suficiente no saldo + cheque especial e retirará caso for true,
+     * caso não, o método informa que o valor é maior que o saldo + cheque especial da conta
+     * @param valor valor que será sacado do saldo da conta ou do saldo + cheque especial
+     */
     @Override
     public void sacar(double valor) {
         String valorFormatado = super.getSaldo().replaceAll(",", ".");
