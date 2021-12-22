@@ -62,5 +62,9 @@ public class Teste {
         testeContaCorrente.depositar(600);
         System.out.println(testeContaCorrente.getSaldo());
         System.out.println(testeContaCorrente.getAgencia());
+
+        // Fazendo o casting de uma instância da classe Pai para a classe Filha
+        ContaCorrente testeConta3 = (ContaCorrente) testeConta1;
+        System.out.println(testeConta3.getAgencia());
     }
 }
