@@ -69,6 +69,8 @@ public class ContaCorrente extends Conta {
                 "\nValor do Cheque Especial: " + this.chequeEspecial;
     }
 
+    //@Override para indicar que o método a seguir sobrescreve (polimorfismo) um método da classe Pai
+    @Override
     public void sacar(double valor) {
         String valorFormatado = super.getSaldo().replaceAll(",", ".");
         double valorDouble = Double.parseDouble(valorFormatado);
