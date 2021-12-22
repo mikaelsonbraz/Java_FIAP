@@ -19,7 +19,7 @@ public class Conta implements Serializable {
     Telefone telefone = new Telefone();
 
     //Formato de dois digitos após a vírgula nos tipo double
-    DecimalFormat deci = new DecimalFormat(".00");
+    private DecimalFormat deci = new DecimalFormat(".00");
 
     //Construtor padrão
     public Conta() {

@@ -50,5 +50,17 @@ public class Teste {
             System.out.println("A instância não aponta pra null!");
             System.out.println(testeContaNull);
         }
+
+        // Instanciando e testando um objeto da classe ContaCorrente
+        ContaCorrente testeContaCorrente = new ContaCorrente("Física", 1000);
+        testeContaCorrente.setAgencia(123);
+        testeContaCorrente.setConta(1234);
+        testeContaCorrente.setSaldo(2000);
+
+        System.out.println(testeContaCorrente.getSaldo());
+        testeContaCorrente.sacar(100);
+        testeContaCorrente.depositar(600);
+        System.out.println(testeContaCorrente.getSaldo());
+        System.out.println(testeContaCorrente.getAgencia());
     }
 }
