@@ -29,7 +29,13 @@ public class Teste {
         // TESTE 3 -----------------------------------------------------
 
         ClasseFilha_Torcedor testeTorcedor3 = new ClasseFilha_Torcedor("Vasco", "futebol", "Brasil", 2, false, davi);
-        // Podemos tambémm declarar um novo objeto chamando a classe pai
+
+        /* Podemos tambémm declarar um novo objeto chamando a classe pai
+            Porém ao fazer isso só poderemos acessar os atributos e métodos que estão na classe pai
+            ClassePai_Pessoa = testeTorcedor4 = new ClasseFilhaTorcedor();
+            testeTorcedor4.nome = "Fulano";
+            testeTorcedor4.idade = 25;
+         */
 
         System.out.println(testeTorcedor3.getInfoTorcedor());
     }
