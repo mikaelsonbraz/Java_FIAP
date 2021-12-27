@@ -1,6 +1,4 @@
-package cap03;
-
-import java.util.Date;
+package cap_03;
 
 public class Cliente {
 
