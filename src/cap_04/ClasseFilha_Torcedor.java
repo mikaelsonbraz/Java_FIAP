@@ -1,6 +1,6 @@
 package cap_04;
 
-public class ClasseFilha_Torcedor extends ClassePai_Pessoa { // Note a palavra reservada extends, ostrando que há umma herança
+public class ClasseFilha_Torcedor extends ClassePai_Pessoa { // Note a palavra reservada extends, mostrando que há umma herança
 
     protected String time;
     protected String esporte;
@@ -23,9 +23,10 @@ public class ClasseFilha_Torcedor extends ClassePai_Pessoa { // Note a palavra r
      * @param esporte - esporte praticado pelo time
      * @param pais    - país que o time é pertencente
      * @param titulos - quantidade ded titulos ganhos na historia pelo time
-     * @param elite - booleano para verificar se o timme se encontra na divisão de elite do esporte no país
+     * @param elite   - booleano para verificar se o timme se encontra na divisão de elite do esporte no país
      */
-    public ClasseFilha_Torcedor(String time, String esporte, String pais, int titulos, boolean elite, ClassePai_Pessoa pessoa) {
+    public ClasseFilha_Torcedor(String time, String esporte, String pais, int titulos, boolean elite, ClassePai_Pessoa
+            pessoa) {
         this.time = time;
         this.esporte = esporte;
         this.pais = pais;
