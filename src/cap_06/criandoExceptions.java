@@ -17,8 +17,8 @@ public class criandoExceptions {
 
         } catch (Exception e) {
 
+            System.out.println(e.getMessage());
             throw new DivisaoPorZeroException();
-
         }
     }
 }
